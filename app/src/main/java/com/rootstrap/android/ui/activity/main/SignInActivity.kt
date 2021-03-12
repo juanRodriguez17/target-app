@@ -33,6 +33,7 @@ class SignInActivity : PermissionActivity(), AuthView {
         Analytics.track(PageEvents.visit(VISIT_SIGN_IN))
 
         binding.signInButton.setOnClickListener { signIn() }
+        binding.signUpButton.setOnClickListener { signOut() }
         binding.emailEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.emailEditText) }
         binding.passwordEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.passwordEditText) }
 
@@ -53,6 +54,10 @@ class SignInActivity : PermissionActivity(), AuthView {
             )
             viewModel.signIn(user)
         }
+    }
+
+    private fun signOut() {
+        startActivityClearTask(SignUpActivity())
     }
 
     private fun setObservers() {

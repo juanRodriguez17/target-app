@@ -30,6 +30,7 @@
         <item name="android:paddingBottom">9dp</item>
         <item name="android:paddingStart">4dp</item>
         <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="button_normal">
