@@ -2,6 +2,7 @@ package com.rootstrap.android.ui.activity.main
 
 import android.Manifest
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.rootstrap.android.R
@@ -16,6 +17,7 @@ import com.rootstrap.android.util.extensions.value
 import com.rootstrap.android.util.permissions.PermissionActivity
 import com.rootstrap.android.util.permissions.PermissionResponse
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_sign_in.*
 
 @AndroidEntryPoint
 class SignInActivity : PermissionActivity(), AuthView {
@@ -31,11 +33,12 @@ class SignInActivity : PermissionActivity(), AuthView {
         Analytics.track(PageEvents.visit(VISIT_SIGN_IN))
 
         binding.signInButton.setOnClickListener { signIn() }
+        binding.emailEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.emailEditText) }
+        binding.passwordEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.passwordEditText) }
 
         lifecycle.addObserver(viewModel)
 
         setObservers()
-        sampleAskForPermission()
     }
 
     override fun showProfile() {
@@ -69,19 +72,14 @@ class SignInActivity : PermissionActivity(), AuthView {
         })
     }
 
-    private fun sampleAskForPermission() {
-        requestPermission(arrayOf(Manifest.permission.CAMERA), object : PermissionResponse {
-            override fun granted() {
-                // TODO..
-            }
+    override fun showError(message: String?) {
+        sign_in_message_error.visibility = View.VISIBLE
+        email_edit_text.background = resources.getDrawable(R.drawable.edittext_backgorund_error)
+        password_edit_text.background = resources.getDrawable(R.drawable.edittext_backgorund_error)
+    }
 
-            override fun denied() {
-                // TODO..
-            }
-
-            override fun foreverDenied() {
-                // TODO..
-            }
-        })
+    private fun changeBackground(view: View) {
+        view.background = resources.getDrawable(R.drawable.edittext_background)
+        binding.signInMessageError.visibility = View.GONE
     }
 }

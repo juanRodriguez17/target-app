@@ -1,6 +1,6 @@
 <resources>
     <!-- General -->
-    <string name="app_name">RootstrapAndroidBase</string>
+    <string name="app_name">Target</string>
     <string name="ok">OK</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -12,6 +12,7 @@
     <string name="error">ERROR</string>
 
     <!-- Sign Up -->
+    <string name="text_header">Target MVD</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
@@ -21,6 +22,9 @@
 
     <!-- Sign In -->
     <string name="sign_in">Sign In</string>
+    <string name="forgot_your_password_text">Forgot your password?</string>
+    <string name="connect_with_facebook">Connect with Facebook</string>
+    <string name="this_email_and_password_error">this email and password don’t match</string>
 
     <!-- Profile -->
     <string name="welcome_message">Hi %1$s!</string>
