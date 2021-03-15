@@ -32,10 +32,12 @@ class SignInActivity : PermissionActivity(), AuthView {
         setContentView(binding.root)
         Analytics.track(PageEvents.visit(VISIT_SIGN_IN))
 
-        binding.signInButton.setOnClickListener { signIn() }
-        binding.signUpButton.setOnClickListener { signOut() }
-        binding.emailEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.emailEditText) }
-        binding.passwordEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.passwordEditText) }
+        binding.apply {
+            signInButton.setOnClickListener { signIn() }
+            signUpButton.setOnClickListener { signOut() }
+            emailEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.emailEditText) }
+            passwordEditText.setOnFocusChangeListener { _, _ -> changeBackground(binding.passwordEditText) }
+        }
 
         lifecycle.addObserver(viewModel)
 
