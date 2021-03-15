@@ -3,9 +3,96 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/dodger_blue</item>
+        <item name="android:colorPrimaryDark">@color/dodger_blue</item>
+        <item name="colorAccent">@color/alizarin</item>
+        <item name="android:colorAccent">@color/alizarin</item>
+        <item name="editTextStyle">@style/edit_text_style</item>
+        <item name="android:editTextStyle">@style/edit_text_style</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="edit_text_style" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:paddingTop">9dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingBottom">9dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="button_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">114dp</item>
+        <item name="android:minHeight">37dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text_in_frame">
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_in_frame.Bold">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <!-- Sign up -->
+
+    <style name="text_sign_in_up_header">
+        <item name="android:layout_marginTop">75dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/text_header</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="text_forgot_pass" parent="text_in_frame">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="text_facebook_connect" parent="text_in_frame.Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.4</item>
+    </style>
+
+    <style name="edit_text_title_section" parent="text_in_frame.Bold">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:letterSpacing">0.4</item>
+    </style>
+
+    <style name="text_message_sign_in_error" parent="text_in_frame">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/alizarin</item>
+    </style>
+
+    <style name="text_sign_up" parent="text_in_frame">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!--  -->
 
 </resources>

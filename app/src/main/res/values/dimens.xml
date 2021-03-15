@@ -8,4 +8,21 @@
     <dimen name="text_input_margin_top">20dp</dimen>
     <dimen name="sign_up_margin_horizontal">45dp</dimen>
     <dimen name="sign_up_button_height">48dp</dimen>
+
+    <dimen name="margin_0">0dp</dimen>
+    <dimen name="margin_0_5">4dp</dimen>
+    <dimen name="margin_1">8dp</dimen>
+    <dimen name="margin_1_5">12dp</dimen>
+    <dimen name="margin_2">16dp</dimen>
+    <dimen name="margin_2_5">20dp</dimen>
+    <dimen name="margin_3">24dp</dimen>
+
+    <dimen name="padding_0">@dimen/margin_0</dimen>
+    <dimen name="padding_0_5">@dimen/margin_0_5</dimen>
+    <dimen name="padding_1">@dimen/margin_1</dimen>
+    <dimen name="padding_1_5">@dimen/margin_1_5</dimen>
+    <dimen name="padding_2">@dimen/margin_2</dimen>
+    <dimen name="padding_2_5">@dimen/margin_2_5</dimen>
+    <dimen name="padding_3">@dimen/margin_3</dimen>
+
 </resources>

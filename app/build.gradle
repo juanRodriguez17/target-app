@@ -65,19 +65,19 @@ android {
             dimension "server"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            buildConfigField("String", "API_URL", "\"https://target-mvd-api.herokuapp.com/\"")
+            buildConfigField("String", "API_URL", "\"https://target-mvd-api.herokuapp.com/api/v1/\"")
         }
 
         staging {
             dimension "server"
             applicationIdSuffix ".staging"
             versionNameSuffix "-staging"
-            buildConfigField("String", "API_URL", "\"https://target-mvd-api.herokuapp.com/\"")
+            buildConfigField("String", "API_URL", "\"https://target-mvd-api.herokuapp.com/api/v1/\"")
         }
 
         prod {
             dimension "server"
-            buildConfigField("String", "API_URL", "\"https://target-mvd-api.herokuapp.com/\"")
+            buildConfigField("String", "API_URL", "\"target-mvd-api.herokuapp.com/api/v1/\"")
         }
     }
 

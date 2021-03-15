@@ -13,3 +13,5 @@ data class User(
 )
 
 data class UserSerializer(@Json(name = "user") val user: User)
+
+data class UserSignInSerializer(@Json(name = "data") val user: User)
